@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DogBreedsController < ApplicationController
   def new
     @dog_breed = DogBreed.new
@@ -9,11 +11,7 @@ class DogBreedsController < ApplicationController
     if @dog_breed.valid?
       @result = DogApi::GenerateImage.call(@dog_breed.name)
 
-      if @result.valid?
-        render turbo_stream: turbo_stream.update('dog-image-container', partial: 'response')
-      else
-        render turbo_stream: turbo_stream.update('dog-image-container', partial: 'response')
-      end
+      render turbo_stream: turbo_stream.update('dog-image-container', partial: 'response')
     else
       render turbo_stream: turbo_stream.update('dog-image-container', partial: 'error_message')
     end

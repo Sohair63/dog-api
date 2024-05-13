@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationService
   def self.call(*args, &block)
     new(*args, &block).call
@@ -16,9 +18,7 @@ class ApplicationService
 
     request.body = JSON.dump(body) if body.present?
 
-    response = https.request(request)
-
-    response
+    https.request(request)
   end
 
   private
