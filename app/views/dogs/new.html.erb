@@ -1,10 +1,11 @@
-<div class="flex flex-col md:flex-row justify-between">
-  <div class="w-full md:w-1/2 pr-0 md:pr-4">
+<div class="flex flex-col lg:flex-row justify-between lg:space-x-8">
+  <div class="w-full lg:w-1/2">
     <%= render 'form' %>
   </div>
-  <div class="w-full md:w-1/2 pl-0 md:pl-4">
-    <div id="dog-image-container" class="flex justify-center items-center h-full bg-gray-200 rounded-md">
-      <!-- Dog breed image will be displayed here -->
+
+  <div class="w-full lg:w-1/2 mt-8 lg:mt-0">
+    <div id="dog-image-container" class="rounded-lg p-8">
+      <%= render 'response' if @result %>
     </div>
   </div>
 </div>

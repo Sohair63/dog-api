@@ -1,10 +1,9 @@
-<div class="text-center">
-  <% if @result.valid? %>
-    <%= image_tag @result.data['message'], class: "img-fluid rounded" %>
-    <p class="mt-2">Breed: <%= @dog.breed.capitalize %></p>
-  <% else %>
-    <div class="alert alert-danger">
-      <%= @result.data['message'] %>
-    </div>
-  <% end %>
-</div>
+<% if @result.valid? %>
+  <p class="mb-2">
+    <strong>Breed:</strong>
+    <%= @dog.breed.capitalize %>
+  </p>
+  <%= image_tag @result.data['message'], class: "rounded-lg md:w-96 object-cover", alt: @dog.breed %>
+<% else %>
+  <p><%= @result.data['message'] %></p>
+<% end %>

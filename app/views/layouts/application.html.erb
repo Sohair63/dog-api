@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DogBreedImageViewer</title>
+    <title>Dogs Breed</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,17 +11,23 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <header>
-      <!-- Header content goes here -->
-    </header>
-
-    <div class="container mx-auto">
-      <%= yield %>
+  <body class="bg-gray-100 min-h-screen flex flex-col">
+    <div class="wrapper flex-3">
+      <header class="bg-blue-500 text-white py-4">
+        <div class="container mx-auto px-4">
+          <h1 class="text-2xl font-bold">Dog Breed</h1>
+        </div>
+      </header>
     </div>
 
-    <footer>
-      <!-- Footer content goes here -->
+    <main class="bg-white shadow-md container mx-auto mt-8 mb-8 px-4 flex-1">
+      <%= yield %>
+    </main>
+
+    <footer class="bg-blue-500 text-white py-4">
+      <div class="container mx-auto px-4">
+        <p class="text-center">&copy; <%= Time.zone.now.year %> Dogs Breed. All rights reserved.</p>
+      </div>
     </footer>
   </body>
 </html>
