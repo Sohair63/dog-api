@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  root 'dog_breeds#new'
-  resources :dog_breeds, only: %i[new create]
+  root 'dogs#new'
+  resources :dogs, only: %i[new create]
 end
