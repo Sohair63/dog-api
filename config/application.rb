@@ -40,3 +40,5 @@ module DogBreedImageViewer
     config.generators.system_tests = nil
   end
 end
+
+require 'net/http'

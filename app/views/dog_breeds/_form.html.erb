@@ -1,0 +1,5 @@
+<%= form_with(model: @dog_breed, id: "breed-form") do |form| %>
+  <%= form.label :breed, "Breed" %>
+  <%= form.text_field :name, id: "breed-input" %>
+  <%= form.submit "Submit", class: "btn btn-primary" %>
+<% end %>
