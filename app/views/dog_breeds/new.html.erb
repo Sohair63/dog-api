@@ -1,11 +1,9 @@
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <%= turbo_frame_tag 'breed-form' do %>
-        <%= render 'form' %>
-      <% end %>
-    </div>
-    <div class="col-md-6" id="dog-image-container">
+<div class="flex flex-col md:flex-row justify-between">
+  <div class="w-full md:w-1/2 pr-0 md:pr-4">
+    <%= render 'form' %>
+  </div>
+  <div class="w-full md:w-1/2 pl-0 md:pl-4">
+    <div id="dog-image-container" class="flex justify-center items-center h-full bg-gray-200 rounded-md">
       <!-- Dog breed image will be displayed here -->
     </div>
   </div>
